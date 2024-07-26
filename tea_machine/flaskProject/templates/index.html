@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tea Machine</title>
+</head>
+<body>
+    <h1>Tea Machine</h1>
+    <form action="/zaparzenie" method="post">
+        <label for="rodzaj">Rodzaj herbaty:</label>
+        <select id="rodzaj" name="rodzaj">
+            <option>czarna</option>
+            <option>zielona</option>
+            <option>owocowa</option>
+            <option>mietowa</option>
+        </select>
+        <button type="submit">Zaparz herbatę</button>
+    </form>
+
+    <form action="/sprawdzenie" method="post">
+        <label for="rodzaj">Rodzaj herbaty:</label>
+        <select id="rodzaj" name="rodzaj">
+            <option>czarna</option>
+            <option>zielona</option>
+            <option>owocowa</option>
+            <option>mietowa</option>
+        </select>
+        <button type="submit">Sprawdź zawartość</button>
+    </form>
+
+    <form action="/dodanie" method="post">
+        <label for="rodzaj">Rodzaj herbaty:</label>
+        <select id="rodzaj" name="rodzaj">
+            <option>czarna</option>
+            <option>zielona</option>
+            <option>owocowa</option>
+            <option>mietowa</option>
+        </select>
+        <label for="ilosc">Ilość:</label>
+        <input type="text" id="ilosc" name="ilosc">
+        <button type="submit">Dodaj herbatę</button>
+    </form>
+</body>
+</html>

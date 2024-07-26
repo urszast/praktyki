@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  tea_machine_compose:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    container_name: tea_machine_compose
+    image: tea_machine
+    ports:
+      - "9998:8000"
+

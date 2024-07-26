@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  teabackend:
+    build:
+      context: ./fastApi_TeaMachine
+      dockerfile: Dockerfile
+    container_name: teabackend
+    image: tea_api
+    env_file:
+      - ./.env
+#    ports:
+#      - "9970:8000"
+#    networks:
+#      - tea_network
+
+
+  teafrontend:
+    build:
+      context: ./flaskProject
+      dockerfile: Dockerfile
+    container_name: teafrontend
+    image: tea_flask
+#    env_file:
+#      - ./.env
+    ports:
+      - "9960:8000"
+    depends_on:
+      - teabackend
+#    networks:
+#      - tea_network
+    environment:
+      - FLASK_DEBUG=1
+      - FLASK_ENV=development
+
+
+#networks:
+#  tea_network:
+#    driver: bridge
+

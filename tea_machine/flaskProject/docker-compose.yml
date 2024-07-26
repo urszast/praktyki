@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  backend:
+    container_name: backend
+    image: tea2
+    env_file:
+      - c:/Users/Asus/Desktop/fastApi_TeaMachine/.env
+#    ports:
+#      - "9970:8000"
+    networks:
+      - tea_network
+#    configs:
+
+
+  frontend:
+    container_name: frontend
+    image: flask_tea_machine
+    ports:
+      - "9970:8000"
+    depends_on:
+      - backend
+    networks:
+      - tea_network
+    environment:
+      - app_url="http://localhost:8000"
+
+
+networks:
+  tea_network:
+    driver: bridge
+

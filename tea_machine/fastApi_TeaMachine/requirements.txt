@@ -1,0 +1,10 @@
+# fastapi == 0.95.1
+# uvicorn == 0.22.0
+pydantic == 2.8.0
+# prometheus-fastapi-instrumentator == 6.0.0
+# aiokafka == 0.8.0
+
+fastapi~=0.111.0
+python-dotenv~=1.0.1
+flask~=3.0.3
+requests~=2.7.0
